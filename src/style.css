@@ -1,0 +1,155 @@
+:root {
+  --bg-color: #0d0d0d;
+  --text-color: #ffffff;
+  --accent-color: #646cff; /* Vite blue-ish */
+  --accent-secondary: #ff3e00; /* Orange-ish */
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(13, 13, 13, 0.7);
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 0%, #666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+/* Glassmorphism Card */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px -10px rgba(100, 108, 255, 0.4);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #aaa;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.nav-brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.nav-links a:hover, .nav-links a.router-link-active {
+  color: #fff;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #535bf2;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
