@@ -6,12 +6,14 @@ import type { Scene } from '../webgpu/types';
 import HelloTriangle from '../scenes/HelloTriangle';
 import GradientPattern from '../scenes/GradientPattern';
 import RotatingCube from '../scenes/RotatingCube';
+import BouncingSpheres from '../scenes/BouncingSpheres';
 
 // Simple registry for now - will expand as scenes are added
 const sceneRegistry: Record<string, any> = {
   'hello-triangle': HelloTriangle,
   'gradient-pattern': GradientPattern,
-  'rotating-cube': RotatingCube
+  'rotating-cube': RotatingCube,
+  'bouncing-spheres': BouncingSpheres
 };
 
 const route = useRoute();

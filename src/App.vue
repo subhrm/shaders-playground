@@ -8,7 +8,7 @@
     </router-link>
     <div class="nav-links">
       <router-link to="/">Home</router-link>
-      <a href="https://github.com/subhendu/shaders-playground" target="_blank">GitHub</a>
+      <a href="https://github.com/subhrm/shaders-playground" target="_blank">GitHub</a>
     </div>
   </nav>
   

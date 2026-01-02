@@ -20,4 +20,9 @@ export const scenes: SceneMetadata[] = [
         name: 'Rotating Cube',
         description: 'A 3D cube with perspective projection and matrix transformations.',
     },
+    {
+        id: 'bouncing-spheres',
+        name: 'Bouncing Spheres',
+        description: '3D Simulation of moving spheres with collision detection using Compute Shaders.',
+    },
 ];
